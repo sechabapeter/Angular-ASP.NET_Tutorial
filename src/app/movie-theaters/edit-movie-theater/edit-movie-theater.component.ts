@@ -1,3 +1,4 @@
+import { MovieTheatersCreationDTO, MovieTheatersDTO } from './../movie-theaters.modul';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,11 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 export class EditMovieTheaterComponent implements OnInit {
 
   constructor(private actvatedRoute: ActivatedRoute) { }
+  model: MovieTheatersDTO = { name: 'Agora', latitude: 1, longitude: 1 };
 
   ngOnInit(): void {
     this.actvatedRoute.params.subscribe(params =>{
       //alert(params['id']);
     })
+  }
+  saveChanges(movieTheater: MovieTheatersCreationDTO){
+
   }
 
 }

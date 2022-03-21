@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { GenericListComponent } from './genres/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {MarkdownModule} from 'ngx-markdown';
+//import "leaflet/dist/images/marker-shadow.png";
+import {LeafletModule} from '@asymmetrik/ngx-leaflet'
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
@@ -26,7 +29,13 @@ import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
 import { FormGenreComponent } from './genres/form-genre/form-genre.component';
 import { MovieFilterComponent } from './movies/movie-filter/movie-filter.component';
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
-import { InputImgComponent } from './utilitie/input-img/input-img.component';
+import { InputImgComponent } from './utilities/input-img/input-img.component';
+import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
+import { MovieTheaterFormComponent } from './movie-theaters/movie-theater-form/movie-theater-form.component';
+import { MapComponent } from './utilities/map/map.component';
+import { FormMovieComponent } from './movies/form-movie/form-movie.component';
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
+import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
 
 
 @NgModule({
@@ -53,6 +62,13 @@ import { InputImgComponent } from './utilitie/input-img/input-img.component';
     MovieFilterComponent,
     FormActorComponent,
     InputImgComponent,
+    InputMarkdownComponent,
+    MovieTheaterFormComponent,
+    MapComponent,
+    FormMovieComponent,
+    MultipleSelectorComponent,
+    ActorsAutocompleteComponent,
+
 
 
 
@@ -62,7 +78,10 @@ import { InputImgComponent } from './utilitie/input-img/input-img.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    LeafletModule,
+    MarkdownModule.forRoot()
 
 
 

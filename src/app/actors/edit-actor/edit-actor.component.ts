@@ -1,4 +1,4 @@
-import { actorCreationDTO } from './../../actors.mode';
+import { actorCreationDTO, actorDTO } from './../../actors.mode';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -10,7 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 export class EditActorComponent implements OnInit {
 
   constructor(private actvatedRoute: ActivatedRoute) { }
-  model: actorCreationDTO ={name: 'Tom Holland', dateOfBirth: new Date()}
+  model: actorDTO ={name: 'Tom Holland', dateOfBirth: new Date(),
+  picture: 'https://m.media-amazon.com/images/M/MV5BNzZiNTEyNTItYjNhMS00YjI2LWIwMWQtZmYwYTRlNjMyZTJjXkEyXkFqcGdeQXVyMTExNzQzMDE0._V1_UX214_CR0,0,214,317_AL_.jpg',
+  biography: 'default value'
+}
 
   ngOnInit(): void {
     this.actvatedRoute.params.subscribe(params =>{

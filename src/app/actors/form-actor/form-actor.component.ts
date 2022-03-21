@@ -22,7 +22,9 @@ export class FormActorComponent implements OnInit {
     name: ['', {
       validators: [Validators.required]
     }],
-    dateofBirth: ''
+    dateofBirth: '',
+    picture: '',
+    biography: ''
     });
     if (this.model !== undefined){
       this.form.patchValue(this.model);
@@ -30,6 +32,15 @@ export class FormActorComponent implements OnInit {
   }
   saveChanges() {
   this.onSaveChanges.emit(this.form.value);
+  }
+  changeMarkdown(content){
+    this.form.get('biography').setValue(content);
+  }
+
+  onImageSelected(image){
+
+    this.form.get('picture').setValue(image);
+
   }
 
 }
